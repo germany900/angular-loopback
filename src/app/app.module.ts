@@ -17,12 +17,20 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {MaterialModule} from 'src/app/shared/module/material/material.module';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ToasterComponent } from './components/toaster/toaster.component';
+import { CreateCategoryDialogComponent } from './components/dialogs/create-category-dialog/create-category-dialog.component';
+import { ConfirmationComponent } from './components/dialogs/confirmation/confirmation.component';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { ChangePasswordComponent } from './components/dialogs/change-password/change-password.component';
+
 
 @NgModule({
   declarations: [
    AppComponent,
    PageNotFoundComponent,
-   ToasterComponent
+   ToasterComponent,
+   CreateCategoryDialogComponent,
+   ConfirmationComponent,
+   ChangePasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +40,8 @@ import { ToasterComponent } from './components/toaster/toaster.component';
     MaterialModule,
     ReactiveFormsModule, 
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularEditorModule
   ],
   providers: [
     AuthService,
@@ -45,7 +54,10 @@ import { ToasterComponent } from './components/toaster/toaster.component';
   ],
   bootstrap: [AppComponent],
   entryComponents: [
-    ToasterComponent
+    ToasterComponent,
+    CreateCategoryDialogComponent,
+    ConfirmationComponent,
+    ChangePasswordComponent
   ]
 })
 export class AppModule { }

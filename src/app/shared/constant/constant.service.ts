@@ -11,7 +11,13 @@ export class ConstantService {
 
   static apiRoutes = {
     login: `${environment.apiUrl}/appusers/login`,
-    signup: `${environment.apiUrl}/appusers`
+    signup: `${environment.apiUrl}/appusers`,
+    sendverifyemail: `${environment.apiUrl}/appusers/sendEmail`,
+    forgotPassword: `${environment.apiUrl}/appusers/reset`,
+    resetPassword: `${environment.apiUrl}/appusers/updateForgetPassword`,
+    logout: `${environment.apiUrl}/appusers/logout`,
+    sharedApi: `${environment.apiUrl}/superusers`,
+    categories: `${environment.apiUrl}/categories`
   }
 
   static apiMethod = {
@@ -39,6 +45,7 @@ export class ConstantService {
   }
 
   static successMessages = {
-    userLoggedIn: "User has logged in"  
+    userLoggedIn: "User has logged in",
+    changePassword: "Your Password has been changed"
   }
 }

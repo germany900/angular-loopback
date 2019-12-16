@@ -14,7 +14,7 @@ export class AuthGuardService implements CanActivate {
 
   canActivate() {
     if(this.auth.getToken()) {
-      return true;
+      return true; 
     } else {
       if(this.router.url === "/register") {
         return true;
